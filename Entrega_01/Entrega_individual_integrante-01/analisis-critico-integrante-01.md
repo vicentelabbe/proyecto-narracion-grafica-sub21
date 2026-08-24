@@ -1,4 +1,4 @@
-# Análisis Crítico Individual - Integrante 01
+# Análisis Crítico Individual - Vicente Labbé
 
 ## 1. ¿Qué espero contar y/o revelar del tema?
 
