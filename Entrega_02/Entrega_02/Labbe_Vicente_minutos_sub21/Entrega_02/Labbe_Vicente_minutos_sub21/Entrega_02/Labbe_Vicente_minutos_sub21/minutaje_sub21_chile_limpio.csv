@@ -1,0 +1,21 @@
+id_jugador,nombre_jugador,club,temporada,edad_en_temporada,posicion_agrupada,partidos_convocado,partidos_titular,partidos_sustituido,minuto_promedio_salida,minutos_sub21_regla,minutos_totales_liga,cuota_completada_club
+CHI-1001,Marcelo Morales,Universidad de Chile,2021,18,Defensa,28,24,6,68.5,1350,2045,True
+CHI-1002,Vicente Pizarro,Colo-Colo,2021,19,Mediocampista,25,18,4,74.2,1280,1540,True
+CHI-1003,Jeyson Rojas,Colo-Colo,2021,19,Defensa,27,26,3,82.0,1350,2280,True
+CHI-1004,Alexander Aravena,Deportes La Serena,2021,19,Delantero,24,12,8,61.4,980,1150,True
+CHI-1005,Bruno Barticciotto,Palestino,2021,20,Delantero,26,17,9,64.0,1120,1490,True
+CHI-1006,Gonzalo Tapia,Universidad Catolica,2021,19,Delantero,14,8,5,58.0,620,710,True
+CHI-1007,Daniel Gonzalez,Santiago Wanderers,2021,19,Defensa,18,18,1,85.0,1350,1590,False
+CHI-1008,Cesar Perez,Magallanes,2022,20,Mediocampista,29,27,5,76.4,1350,2340,True
+CHI-1009,Bastian Yañez,Union Española,2021,20,Delantero,27,24,11,69.1,1350,1980,True
+CHI-1010,Joan Cruz,Colo-Colo,2021,18,Mediocampista,19,7,6,54.2,560,680,True
+CHI-1011,Lucas Assadi,Universidad de Chile,2022,18,Mediocampista,27,16,10,63.1,1140,1420,True
+CHI-1012,Dario Osorio,Universidad de Chile,2022,18,Delantero,27,22,12,71.0,1350,1890,True
+CHI-1013,Clemente Montes,Universidad Catolica,2021,20,Delantero,18,7,6,56.5,590,720,True
+CHI-1014,Daniel Gutierrez,Colo-Colo,2022,19,Defensa,15,10,3,78.0,810,920,True
+CHI-1015,Esteban Moreira,O Higgins,2022,20,Delantero,22,11,7,62.3,870,1080,True
+CHI-1016,Felipe Yañez,Coquimbo Unido,2022,18,Defensa,20,14,5,60.0,1020,1180,True
+CHI-1017,Cristobal Castillo,O Higgins,2021,18,Mediocampista,16,9,4,65.0,720,810,True
+CHI-1018,Simon Ramirez,Union La Calera,2021,21,Defensa,23,15,4,72.0,1100,1320,True
+CHI-1019,Ignacio Saavedra,Universidad Catolica,2019,20,Mediocampista,21,19,2,83.0,1350,1650,True
+CHI-1020,Tomas Alarcon,O Higgins,2019,20,Mediocampista,24,24,2,86.5,1350,2110,True
