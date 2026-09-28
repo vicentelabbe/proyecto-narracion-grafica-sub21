@@ -1,0 +1,10 @@
+```csv
+Player_Name,Birth_Date,Initial_Club,Season_Debut,Mins_U21,Club_Age_22,Mins_Age_22,Div_22,Club_Age_24,Mins_Age_24,Div_24,Status_Notes
+Morales Marcelo,06/06/2003,U. de Chile,2021,2045,U. de Chile,1890,1st Tier,U. de Chile,2150,1st Tier,Regular starter
+Pizarro Vicente,05/11/2002,Colo Colo,2021,1540,Colo Colo,1620,1st Tier,Colo Colo,1980,1st Tier,Regular starter
+Rojas Jeyson,23/01/2002,Colo Colo,2021,2280,Colo Colo,810,1st Tier,Curico Unido,450,1st Tier,Bench / Loan
+Cruz Joan,04/04/2003,Colo Colo,2021,680,Real Oviedo Vetusta,180,4th Tier (ESP),Everton,420,1st Tier,Irregular
+Alarcon Tomas,19/01/1999,O Higgins,2019,2110,O Higgins,2300,1st Tier,Cadiz CF,1800,1st Tier (ESP),Sold abroad
+Carvallo Bryan,15/09/1996,Colo Colo,2017,890,Deportes Antofagasta,210,2nd Tier,None,0,Free agent,Contract terminated
+
+```
