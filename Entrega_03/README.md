@@ -1,14 +1,29 @@
-# Entrega 03 · Regla de minutos Sub-21 en Chile: cohorte 2019 a los 22 y 24 años
+# Documentación Metodológica y Proceso de Visualización - Integrante 01
 
-**Hipótesis actual.** La regla de minutos Sub-21 dio visibilidad a la cohorte en 2019, pero la carrera a los 22 y 24 años depende más del club de destino y de la salida al extranjero que de los minutos obtenidos bajo la norma.
+## 1. Proceso de Diseño Visual en Altair y Decisiones Tomadas
 
-**Preguntas de investigación**
-1. ¿Cuántos minutos conservan o ganan los jugadores a los 22 años respecto de 2019?
-2. ¿Los minutos de 2019 anticipan el estatus de carrera a los 24 años?
-3. ¿Qué casos se alejan de la tendencia y por qué?
+Para comunicar la evolución de la cohorte 2019 a través del tiempo, se seleccionó un diagrama de dispersión multivariable interactivo (*scatter plot*) desarrollado en Altair, privilegiando la precisión geométrica por sobre el adorno visual:
 
-**Avance (base provisional, en verificación).** La base reúne 25 jugadores con minutos en 2019, a los 22 y a los 24 años. Resultados preliminares: 17 de 25 jugaron más minutos a los 22 que en 2019, 5 jugaron menos y 3 quedan en 100 % por construcción (cumplieron 22 en 2019). La mediana pasa de 890 minutos en 2019 a 1.420 a los 22 y 1.250 a los 24. A los 24, 13 jugadores figuran como "Consolidado Primera División", 8 como "Transferido al Extranjero" y 4 como "Ascenso / Segunda".
+* **Posición en los ejes (X e Y):**  
+  * Eje X (`minutos_liga_2019`): Representa el punto de partida bajo la regla reglamentaria.  
+  * Eje Y (`minutos_liga_edad_24`): Mide la consolidación competitiva cinco años después.  
+  * **Línea diagonal de referencia ($x=y$):** Se integró una recta punteada neutra. Todo punto situado por encima de la diagonal identifica a un futbolista que disputó más minutos a los 24 años que en su temporada Sub-21, aislando visualmente el crecimiento de la involución.
+* **Canal de Color:** Se asignó a la variable nominal `estatus_carrera_24` utilizando la paleta accesible Okabe-Ito (`#0072B2`, `#009E73`, `#D55E00`), garantizando legibilidad ante daltonismo y diferenciando con claridad el destino divisional.
+* **Canal de Tamaño:** El área de cada punto codifica los `minutos_liga_edad_22`, permitiendo observar en una sola marca si la transición intermedia fue de titularidad o de ostracismo.
+* **Canal de Forma:** Se distinguen círculos para los nacidos a partir de 1999 y rombos para los nacidos antes de 1999, transparentando las excepciones reglamentarias identificadas en la auditoría.
+* **Interactividad y Scrollytelling:** Se programó un filtro dinámico vinculado a la leyenda (`selection_point`), de modo que al hacer clic en una categoría (ej. *Transferido al Extranjero*) los demás puntos se atenúan a un 15% de opacidad, facilitando el análisis aislado para la webstory.
 
-**Límites actuales.** Cinco jugadores nacieron antes de 1999 y quedan marcados aparte. Los 75 valores de minutos son múltiplos de 10, lo que sugiere aproximación: falta cotejarlos con Transfermarkt y la ANFP antes de publicar cualquier cifra individual.
+## 2. Base de Datos Utilizada y Procesamiento
 
-**Síntesis de la historia actual.** Los datos preliminares no muestran una caída generalizada a los 22 años: la mayoría ganó minutos. El quiebre aparece después y en casos puntuales: cinco jugadores terminan con menos de 500 minutos a los 24, entre ellos varios que habían sumado más de 1.900 minutos a los 22. La historia se construye sobre ese contraste entre quienes se consolidan, quienes emigran y quienes pierden lugar, y el "abismo" deja de ser una edad para convertirse en una bifurcación de trayectorias.
+* **Fuente seleccionada:** `cohorte_2019.csv` (25 registros).  
+* **Criterio de selección:** Es una generación completamente cerrada en el plano temporal (nacidos entre 1997 y 2000), cuyos 22 y 24 años biológicos ya concluyeron en la vida real entre 2019 y 2024, eliminando cualquier margen de proyección o dato especulativo.
+* **Transformaciones previas en Python:** Se recalculó y validó la consistencia del ratio de retención porcentual a los 22 años, se extrajo el año de nacimiento desde la fecha biográfica y se categorizó el criterio reglamentario estricto.
+
+## 3. Preguntas que Responde la Visualización
+
+1. **¿Existe correlación directa entre sumar muchos minutos Sub-21 y consolidarse a los 24 años?**  
+   *La visualización muestra que no necesariamente: jugadores con menos de 700 minutos en 2019 (ej. Williams Alarcón o Carlos Palacios) alcanzaron mayor continuidad y cotización que futbolistas que superaron los 1.500 minutos en su temporada de debut.*
+2. **¿Qué patrón define a los jugadores exportados al extranjero?**  
+   *Al aislar los puntos verdes, se evidencia que la salida internacional se concentra en futbolistas que tuvieron picos de rendimiento sobresalientes a los 22 años (tamaño de punto elevado).*
+3. **¿A quiénes afecta verdaderamente el estancamiento deportivo?**  
+   *El cuadrante inferior derecho expone a los canteranos que tuvieron alto minutaje reglamentario pero que a los 24 años cayeron por debajo de los 1.000 minutos o descendieron a categorías de ascenso.*
