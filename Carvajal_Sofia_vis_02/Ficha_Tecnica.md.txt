@@ -1,0 +1,15 @@
+# Ficha Técnica · vis_02
+
+Fuente: `minutos_sub21_clubes_2019.csv` (16 clubes de Primera División, temporada 2019).
+
+| Variable | Tipo | Uso en vis_02 | Descripción |
+|---|---|---|---|
+| club | categórica nominal | Eje Y | Nombre oficial del club de Primera División |
+| minutos_sub21 | numérico entero | Eje X | Total de minutos disputados por jugadores Sub-21 en el torneo |
+| jugadores_sub21 | numérico entero | Tooltip | Cantidad de canteranos distintos utilizados para cumplir la regla |
+| posicion_predominante | categórica nominal | Color | Posición táctica donde el club concentró la mayor cantidad de minutos |
+| min_defensas | numérico entero | Tooltip | Minutos Sub-21 disputados por defensas centrales y laterales |
+| min_volantes | numérico entero | Tooltip | Minutos Sub-21 disputados por mediocampistas |
+| min_delanteros | numérico entero | Tooltip | Minutos Sub-21 disputados por extremos y delanteros centro |
+| min_arqueros | numérico entero | Tooltip | Minutos Sub-21 disputados en la portería |
+| cumplio_regla | booleana | No se grafica | Indica si el club alcanzó el umbral mínimo obligatorio de 1.350 min |
