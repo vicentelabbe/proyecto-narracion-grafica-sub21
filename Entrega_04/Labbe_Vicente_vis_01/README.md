@@ -28,5 +28,5 @@ El proceso de construcción de la visualización, las decisiones de diseño, las
 
 ## 5. Sitio web individual
 
-**Enlace GitHub Pages:** Pendiente de publicación.
+**Crónica publicada en GitHub Pages:** https://vicentelabbe.github.io/el-mito-del-abismo/
 
