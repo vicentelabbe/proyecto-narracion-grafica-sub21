@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 11, "titleFontSize": 12}, "legend": {"labelFontSize": 11, "titleFontSize": 11}}, "layer": [{"data": {"name": "data-5e910ef21b51a845456cc8d8807b62ab"}, "mark": {"type": "bar", "cornerRadiusBottomRight": 3, "cornerRadiusTopRight": 3}, "encoding": {"color": {"field": "posicion_predominante", "scale": {"domain": ["Volante", "Lateral", "Delantero"], "range": ["#0072B2", "#E69F00", "#009E73"]}, "title": "Posici\u00f3n m\u00e1s utilizada", "type": "nominal"}, "tooltip": [{"field": "club", "title": "Club", "type": "nominal"}, {"field": "minutos_sub21", "format": ",", "title": "Minutos Sub-21", "type": "quantitative"}, {"field": "jugadores_sub21", "title": "Canteranos usados", "type": "quantitative"}, {"field": "posicion_predominante", "title": "Posici\u00f3n predominante", "type": "nominal"}, {"field": "min_volantes", "format": ",", "title": "Min. Volantes", "type": "quantitative"}, {"field": "min_defensas", "format": ",", "title": "Min. Defensas/Laterales", "type": "quantitative"}, {"field": "min_delanteros", "format": ",", "title": "Min. Delanteros", "type": "quantitative"}], "x": {"field": "minutos_sub21", "title": "Minutos totales Sub-21 otorgados en 2019", "type": "quantitative"}, "y": {"field": "club", "sort": "-x", "title": "Club Primera Divisi\u00f3n", "type": "nominal"}}}, {"data": {"name": "data-1ded038a0f18835239de45ceaa9ad793"}, "mark": {"type": "rule", "color": "#D55E00", "strokeDash": [4, 4], "strokeWidth": 2}, "encoding": {"x": {"field": "x", "type": "quantitative"}}}, {"data": {"name": "data-378838f2d592ce59ad3888c72b57f809"}, "mark": {"type": "text", "align": "left", "color": "#D55E00", "dx": 5, "dy": 15, "fontSize": 11, "fontWeight": "bold", "text": "M\u00ednimo exigido ANFP (1.350 min)"}, "encoding": {"x": {"field": "x", "type": "quantitative"}, "y": {"field": "y", "type": "nominal"}}}], "height": 450, "title": {"text": "Minutaje juvenil por club: cumplimiento administrativo vs. convicci\u00f3n formativa (2019)", "anchor": "start", "subtitle": ["Minutos totales otorgados a jugadores Sub-21 por los 16 clubes de Primera Divisi\u00f3n.", "La l\u00ednea naranja discontinua marca la cuota obligatoria ANFP de 1.350 minutos."]}, "width": 680, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-5e910ef21b51a845456cc8d8807b62ab": [{"club": "Universidad Catolica", "minutos_sub21": 2185, "jugadores_sub21": 4, "posicion_predominante": "Delantero", "min_defensas": 180, "min_volantes": 780, "min_delanteros": 1225, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Huachipato", "minutos_sub21": 3150, "jugadores_sub21": 5, "posicion_predominante": "Volante", "min_defensas": 1080, "min_volantes": 1350, "min_delanteros": 720, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "O Higgins", "minutos_sub21": 3370, "jugadores_sub21": 4, "posicion_predominante": "Volante", "min_defensas": 890, "min_volantes": 1940, "min_delanteros": 540, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Curico Unido", "minutos_sub21": 2990, "jugadores_sub21": 3, "posicion_predominante": "Lateral", "min_defensas": 1680, "min_volantes": 0, "min_delanteros": 1310, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Union Espanola", "minutos_sub21": 2420, "jugadores_sub21": 4, "posicion_predominante": "Volante", "min_defensas": 420, "min_volantes": 1620, "min_delanteros": 380, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Colo-Colo", "minutos_sub21": 3640, "jugadores_sub21": 5, "posicion_predominante": "Lateral", "min_defensas": 1890, "min_volantes": 1070, "min_delanteros": 680, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Universidad de Chile", "minutos_sub21": 2520, "jugadores_sub21": 5, "posicion_predominante": "Delantero", "min_defensas": 360, "min_volantes": 950, "min_delanteros": 1120, "min_arqueros": 90, "cumplio_regla": "Si"}, {"club": "Union La Calera", "minutos_sub21": 1540, "jugadores_sub21": 3, "posicion_predominante": "Lateral", "min_defensas": 810, "min_volantes": 490, "min_delanteros": 240, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Everton", "minutos_sub21": 1860, "jugadores_sub21": 3, "posicion_predominante": "Lateral", "min_defensas": 1240, "min_volantes": 340, "min_delanteros": 280, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Palestino", "minutos_sub21": 1490, "jugadores_sub21": 3, "posicion_predominante": "Volante", "min_defensas": 310, "min_volantes": 870, "min_delanteros": 310, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Audax Italiano", "minutos_sub21": 1410, "jugadores_sub21": 2, "posicion_predominante": "Volante", "min_defensas": 210, "min_volantes": 920, "min_delanteros": 280, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Coquimbo Unido", "minutos_sub21": 1390, "jugadores_sub21": 3, "posicion_predominante": "Delantero", "min_defensas": 150, "min_volantes": 410, "min_delanteros": 830, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Cobresal", "minutos_sub21": 1380, "jugadores_sub21": 2, "posicion_predominante": "Volante", "min_defensas": 240, "min_volantes": 860, "min_delanteros": 280, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Deportes Antofagasta", "minutos_sub21": 1420, "jugadores_sub21": 3, "posicion_predominante": "Delantero", "min_defensas": 280, "min_volantes": 390, "min_delanteros": 750, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Deportes Iquique", "minutos_sub21": 1360, "jugadores_sub21": 2, "posicion_predominante": "Volante", "min_defensas": 120, "min_volantes": 760, "min_delanteros": 480, "min_arqueros": 0, "cumplio_regla": "Si"}, {"club": "Universidad de Concepcion", "minutos_sub21": 1370, "jugadores_sub21": 3, "posicion_predominante": "Volante", "min_defensas": 190, "min_volantes": 820, "min_delanteros": 360, "min_arqueros": 0, "cumplio_regla": "Si"}], "data-1ded038a0f18835239de45ceaa9ad793": [{"x": 1350}], "data-378838f2d592ce59ad3888c72b57f809": [{"x": 1350, "y": "Universidad de Concepcion"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
