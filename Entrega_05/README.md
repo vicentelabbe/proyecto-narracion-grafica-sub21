@@ -13,15 +13,71 @@ A través del seguimiento de una cohorte de trabajo de 25 futbolistas y del aná
 
 La historia contempla tres posibles recorridos: continuidad en Chile, salida al extranjero y participación en categorías inferiores.
 
-### 2. Hipótesis
+### 2. Análisis de la hipótesis
 
-La hipótesis de trabajo plantea que las oportunidades de participación durante la etapa juvenil no garantizan, por sí solas, la consolidación profesional posterior.
+#### Hipótesis inicial
 
-La investigación busca examinar la relación entre los minutos disputados en 2019 y la continuidad competitiva de los futbolistas en los años siguientes.
+La hipótesis de trabajo plantea que las oportunidades
+de participación que ofrece la regla Sub-21 no
+garantizan, por sí solas, la consolidación profesional
+posterior de los futbolistas jóvenes.
 
-**Estado de la hipótesis:** pendiente de contrastación definitiva.
+#### Evolución de la hipótesis
 
-Los datos todavía requieren verificación con fuentes documentales y registros individuales, por lo que no corresponde afirmar que la hipótesis ya fue demostrada.
+Durante el desarrollo del proyecto, el análisis se
+amplió hacia dos dimensiones:
+
+1. Las diferencias en los minutos juveniles
+   registrados por los clubes durante 2019.
+2. Las trayectorias profesionales posteriores de
+   una cohorte de 25 futbolistas.
+
+Esta combinación permite estudiar tanto las
+oportunidades iniciales como la evolución de las
+carreras de los jugadores.
+
+#### Resultados preliminares
+
+En la base de trabajo de 25 futbolistas, las
+clasificaciones de trayectoria se distribuyen en:
+
+- 13 jugadores (52%): Consolidado Primera División.
+- 8 jugadores (32%): Transferido al Extranjero.
+- 4 jugadores (16%): Ascenso / Segunda.
+
+Estas categorías corresponden a los registros del
+CSV y requieren verificación periodística.
+
+La visualización de minutaje por club también
+presenta diferencias entre instituciones, aunque
+sus cifras deben contrastarse con fuentes originales.
+
+#### ¿Logramos demostrar la hipótesis?
+
+Por ahora, la hipótesis no puede considerarse
+demostrada.
+
+Los datos permiten explorar distintas trayectorias
+profesionales y diferencias de participación
+juvenil, pero todavía no establecen una relación
+causal entre la regla Sub-21 y la consolidación
+de los futbolistas.
+
+Además, es necesario revisar los criterios de
+selección de la cohorte, las clasificaciones
+individuales y las fuentes utilizadas.
+
+#### Próximos pasos
+
+- Validar los registros de ambas bases de datos.
+- Revisar las clasificaciones de los 25 jugadores.
+- Contrastar los resultados con la hipótesis inicial.
+- Incorporar conclusiones periodísticas respaldadas
+  por evidencia verificable.
+
+Este análisis corresponde a la versión preliminar
+de la webstory y deberá actualizarse antes
+de su versión definitiva.
 
 ### 3. Estructura narrativa
 
