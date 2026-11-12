@@ -203,3 +203,53 @@ header button:hover {
     transition: none;
   }
 }
+
+/* DISEÑO DE LAS VISUALIZACIONES */
+
+#visualizacion-01,
+#visualizacion-02 {
+  scroll-margin-top: 30px;
+}
+
+#visualizacion-02 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#visualizacion-01 iframe,
+#visualizacion-02 iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#visualizacion-02 h2,
+#trayectorias h3 {
+  margin-bottom: 20px;
+}
+
+#visualizacion-02 p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* AJUSTES PARA CELULARES */
+
+@media (max-width: 768px) {
+  #visualizacion-02 {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  #visualizacion-01 iframe,
+  #visualizacion-02 iframe {
+    border-radius: 8px;
+    box-shadow: none;
+  }
+}
