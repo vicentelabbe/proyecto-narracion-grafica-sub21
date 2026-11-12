@@ -68,3 +68,31 @@ La webstory se encuentra en una etapa preliminar.
 La estructura técnica inicial está creada, pero todavía deben integrarse y validarse los contenidos periodísticos del equipo, completar las visualizaciones y realizar las pruebas de funcionamiento.
 
 Este documento se actualizará a medida que avance la implementación.
+
+## 8. Plan de pruebas de la webstory
+
+Antes de entregar la versión preliminar se realizarán las siguientes comprobaciones:
+
+| Elemento | Prueba | Estado |
+|---|---|---|
+| Portada | Verificar título, bajada y botón | Pendiente |
+| Navegación | Probar todos los enlaces del menú | Pendiente |
+| Visualización 01 | Comprobar que cargue el gráfico de Vicente | Pendiente |
+| Visualización 02 | Comprobar que cargue el gráfico de Sofía | Pendiente |
+| Interactividad | Probar las herramientas de exploración de ambos gráficos | Pendiente |
+| Diseño responsive | Revisar lectura en computador, tablet y celular | Pendiente |
+| Contenido | Revisar redacción, cifras y fuentes | Pendiente |
+| GitHub Pages | Confirmar que la webstory sea accesible públicamente | Pendiente |
+
+### Registro de resultados
+
+Las pruebas se documentarán indicando:
+
+- Dispositivo y tamaño de pantalla utilizado.
+- Elemento revisado.
+- Resultado obtenido.
+- Problema detectado, si corresponde.
+- Corrección realizada.
+- Resultado de la nueva comprobación.
+
+Este registro se completará con los resultados reales de las pruebas realizadas por el equipo.
