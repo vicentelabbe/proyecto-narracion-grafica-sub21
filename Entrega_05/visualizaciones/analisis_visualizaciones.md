@@ -1,4 +1,38 @@
 
+## Visualización 01 - Vicente Labbé
+
+### Trayectorias de los futbolistas Sub-21
+
+**Objetivo:** explorar las trayectorias posteriores de los futbolistas jóvenes analizados en el proyecto.
+
+### Relación con la webstory
+
+Esta visualización constituye una parte central de "El mito del abismo", porque permite trasladar el foco desde las oportunidades de participación juvenil hacia las trayectorias posteriores de los jugadores.
+
+Mientras la visualización 02 compara el minutaje de los clubes, esta visualización se concentra en las trayectorias individuales de los futbolistas.
+
+### Archivos de respaldo
+
+- Base de datos: base_datos/cohorte_2019.csv
+- Código Python: codigo/codigo_para_visualizar_1.ipynb
+- Gráfico HTML: codigo/vis_01.html
+- Imagen referencial: imagenes/vis_01.jpg
+
+### Análisis periodístico pendiente de validación
+
+El equipo debe completar este apartado con los resultados obtenidos en la visualización original de Vicente, incluyendo:
+
+- Qué variables se comparan.
+- Qué patrones aparecen en las trayectorias.
+- Qué conclusiones permiten los datos.
+- Cómo estos resultados se relacionan con la hipótesis del reportaje.
+
+Las conclusiones deben respaldarse con la base de datos y la documentación de la Entrega 03.
+
+### Estado
+
+Visualización incorporada técnicamente a la webstory. Pendiente de revisión periodística y pruebas de funcionamiento.
+
 ## Visualización 02 - Sofía Carvajal
 
 ### Minutos Sub-21 por club en 2019
