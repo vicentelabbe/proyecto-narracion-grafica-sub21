@@ -96,3 +96,40 @@ Las pruebas se documentarán indicando:
 - Resultado de la nueva comprobación.
 
 Este registro se completará con los resultados reales de las pruebas realizadas por el equipo.
+
+## 9. Actualización del registro de uso de IA
+
+### Apoyo en la implementación técnica
+
+Se utilizó ChatGPT para adaptar código HTML, CSS y JavaScript.
+
+Los principales encargos fueron:
+
+- Integrar las visualizaciones mediante iframe.
+- Aplicar la identidad visual de la Entrega 04.
+- Proponer ajustes para distintos tamaños de pantalla.
+
+### Apoyo en contenidos y documentación
+
+También se utilizó ChatGPT para preparar
+borradores de:
+
+- Registro de fuentes y verificaciones pendientes.
+
+Este contenido fue generado como propuestas
+preliminares y requiere de revisión editorial
+y validación de datos por parte del equipo.
+
+### Revisión y responsabilidad del equipo
+
+Antes de la entrega se deberá:
+
+- Comprobar el funcionamiento de las interacciones.
+- Verificar las cifras con fuentes originales.
+- Revisar y aprobar los textos periodísticos.
+- Registrar los cambios que efectivamente se realicen.
+- Documentar los resultados reales de las pruebas.
+
+El uso de IA no reemplaza la responsabilidad
+del equipo sobre la precisión periodística,
+las decisiones editoriales y el producto final.
