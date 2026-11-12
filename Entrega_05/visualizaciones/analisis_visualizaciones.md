@@ -20,14 +20,39 @@ Mientras la visualización 02 compara el minutaje de los clubes, esta visualizac
 
 ### Análisis periodístico pendiente de validación
 
-El equipo debe completar este apartado con los resultados obtenidos en la visualización original de Vicente, incluyendo:
+### Resultados exploratorios de la cohorte
 
-- Qué variables se comparan.
-- Qué patrones aparecen en las trayectorias.
-- Qué conclusiones permiten los datos.
-- Cómo estos resultados se relacionan con la hipótesis del reportaje.
+La base de trabajo contiene 25 futbolistas vinculados
+a la temporada 2019.
 
-Las conclusiones deben respaldarse con la base de datos y la documentación de la Entrega 03.
+Según la variable estatus_carrera_24, los jugadores
+se distribuyen de la siguiente manera:
+
+- 13 jugadores (52%): Consolidado Primera División.
+- 8 jugadores (32%): Transferido al Extranjero.
+- 4 jugadores (16%): Ascenso / Segunda.
+
+Además, 17 de los 25 jugadores registran más minutos
+en la temporada correspondiente a sus 24 años que
+en la temporada 2019.
+
+Estos resultados son descriptivos y preliminares.
+
+### Limitaciones
+
+Las categorías de trayectoria y los minutos deben
+verificarse con las fuentes originales.
+
+Las temporadas comparadas corresponden a distintas
+edades y contextos competitivos.
+
+La selección de 25 jugadores no permite generalizar
+los resultados a todos los futbolistas juveniles
+chilenos.
+
+Estos registros no permiten demostrar por sí solos
+una relación causal entre la regla Sub-21 y la
+continuidad profesional.
 
 ### Estado
 
