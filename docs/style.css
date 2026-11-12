@@ -97,3 +97,33 @@ button, .boton {
     min-height: 650px;
   }
 }
+
+/* Diseño de capítulos de la webstory */
+
+#regla-sub21,
+#trayectorias {
+  background-color: #111111;
+  color: #F5F5F0;
+  border-radius: 16px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#regla-sub21 h2,
+#trayectorias h2 {
+  color: #C6FF36;
+}
+
+#introduccion,
+#visualizacion-02,
+#cierre,
+#metodologia {
+  border-bottom: 1px solid #dddddd;
+}
+
+#visualizacion-01 iframe,
+#visualizacion-02 iframe {
+  border-radius: 12px;
+  background: white;
+}
+
