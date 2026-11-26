@@ -1,0 +1,116 @@
+season,teamName,minutos,jugadores,registros_faltantes
+2018,A. Italiano,1560.0,8,0
+2018,Antofagasta,2208.0,8,0
+2018,Colo Colo,2813.0,12,0
+2018,Curico Unido,1557.0,8,0
+2018,Deportes Iquique,1362.0,7,0
+2018,Deportes Temuco,3090.0,8,0
+2018,Everton de Vina,2302.0,8,0
+2018,Huachipato,8115.0,10,0
+2018,O'Higgins,2265.0,8,0
+2018,Palestino,2243.0,11,0
+2018,San Luis,2336.0,13,0
+2018,U. Catolica,5335.0,11,0
+2018,Union Espanola,3645.0,12,0
+2018,Union La Calera,2871.0,7,0
+2018,Universidad de Chile,3078.0,8,0
+2018,Universidad de Concepcion,1360.0,6,0
+2019,A. Italiano,1731.0,10,1
+2019,Antofagasta,2040.0,5,0
+2019,Cobresal,1625.0,6,0
+2019,Colo Colo,1953.0,9,0
+2019,Coquimbo Unido,1532.0,5,0
+2019,Curico Unido,1733.0,11,0
+2019,Deportes Iquique,2085.0,8,0
+2019,Everton de Vina,2368.0,10,0
+2019,Huachipato,1948.0,6,0
+2019,O'Higgins,4278.0,8,0
+2019,Palestino,1420.0,7,0
+2019,U. Catolica,2214.0,7,0
+2019,Union Espanola,2781.0,10,0
+2019,Union La Calera,2309.0,7,0
+2019,Universidad de Chile,2353.0,8,0
+2019,Universidad de Concepcion,1639.0,9,0
+2020,A. Italiano,4036.0,11,0
+2020,Antofagasta,3085.0,8,0
+2020,Cobresal,2613.0,9,0
+2020,Colo Colo,3586.0,13,0
+2020,Coquimbo Unido,1734.0,7,1
+2020,Curico Unido,3533.0,12,0
+2020,D. La Serena,4150.0,19,12
+2020,Deportes Iquique,2037.0,7,0
+2020,Everton de Vina,2302.0,9,1
+2020,Huachipato,6090.0,9,0
+2020,O'Higgins,5144.0,13,0
+2020,Palestino,3649.0,10,0
+2020,Santiago Wanderers,3637.0,15,0
+2020,U. Catolica,6497.0,17,5
+2020,Union Espanola,6994.0,13,0
+2020,Union La Calera,2612.0,9,0
+2020,Universidad de Chile,2140.0,10,0
+2020,Universidad de Concepcion,3774.0,13,0
+2021,A. Italiano,2064.0,8,0
+2021,Antofagasta,2071.0,9,0
+2021,Cobresal,2992.0,11,3
+2021,Colo Colo,5668.0,28,0
+2021,Curico Unido,2299.0,11,0
+2021,D. La Serena,5956.0,12,0
+2021,D. Melipilla,2066.0,6,0
+2021,Everton de Vina,2822.0,12,0
+2021,Huachipato,3562.0,11,0
+2021,Nublense,2109.0,7,0
+2021,O'Higgins,3157.0,12,0
+2021,Palestino,2318.0,10,0
+2021,Santiago Wanderers,6602.0,20,0
+2021,U. Catolica,5194.0,16,0
+2021,Union Espanola,5560.0,11,2
+2021,Union La Calera,2858.0,14,3
+2021,Universidad de Chile,3447.0,16,0
+2022,A. Italiano,2199.0,9,0
+2022,Antofagasta,1939.0,7,0
+2022,Cobresal,2067.0,10,3
+2022,Colo Colo,3325.0,17,2
+2022,Coquimbo Unido,2203.0,9,2
+2022,Curico Unido,1962.0,9,0
+2022,D. La Serena,3200.0,11,0
+2022,Everton de Vina,2902.0,12,0
+2022,Huachipato,2744.0,8,0
+2022,Nublense,2195.0,10,4
+2022,O'Higgins,1945.0,7,0
+2022,Palestino,3265.0,10,0
+2022,U. Catolica,2780.0,15,3
+2022,Union Espanola,6831.0,11,0
+2022,Union La Calera,2010.0,7,0
+2022,Universidad de Chile,8142.0,18,3
+2023,A. Italiano,3379.0,15,7
+2023,Cobresal,1014.0,13,10
+2023,Colo Colo,7707.0,32,19
+2023,Coquimbo Unido,1976.0,10,6
+2023,Curico Unido,2220.0,12,1
+2023,Deportes Copiapo,2449.0,9,2
+2023,Everton de Vina,3143.0,12,3
+2023,Huachipato,2558.0,16,9
+2023,Magallanes,2304.0,16,10
+2023,Nublense,1656.0,18,14
+2023,O'Higgins,2624.0,11,5
+2023,Palestino,2337.0,18,2
+2023,U. Catolica,5029.0,37,19
+2023,Union Espanola,3422.0,12,4
+2023,Union La Calera,2380.0,26,22
+2023,Universidad de Chile,5548.0,16,6
+2024,A. Italiano,2173.0,13,3
+2024,Cobreloa,1095.0,11,1
+2024,Cobresal,1028.0,24,7
+2024,Colo Colo,1965.0,20,8
+2024,Coquimbo Unido,1226.0,13,1
+2024,Deportes Copiapo,1809.0,11,0
+2024,Deportes Iquique,1704.0,11,2
+2024,Everton de Vina,2211.0,15,6
+2024,Huachipato,2181.0,30,14
+2024,Nublense,1717.0,20,11
+2024,O'Higgins,3425.0,11,1
+2024,Palestino,3079.0,19,4
+2024,U. Catolica,766.0,32,11
+2024,Union Espanola,3175.0,14,2
+2024,Union La Calera,2231.0,13,1
+2024,Universidad de Chile,3248.0,16,2

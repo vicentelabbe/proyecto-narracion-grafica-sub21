@@ -1,0 +1,3 @@
+﻿playerId,name,firstName,lastName,photo,nationality,teamId,teamName,teamLogo,position,appearances,minutes,goals,assists,yellow,secondYellow,red,season,fecha_nacimiento,anio_nacimiento,edad_al_cierre_temporada,posicion_normalizada
+12315,G. Jara,Gonzalo Andrés,Jara González,https://media.api-sports.io/football/players/12315.png,Chile,2336,Magallanes,https://media.api-sports.io/football/teams/2336.png,Midfielder,0.0,0.0,0.0,,0.0,0.0,0.0,2019,1998-12-01,1998.0,21.0,Volante
+312995,J. Thompson,Jordhy Eduardo,Thompson Dávila,https://media.api-sports.io/football/players/312995.png,Chile,1080,FC Orenburg,https://media.api-sports.io/football/teams/1080.png,Midfielder,0.0,0.0,0.0,,0.0,0.0,0.0,2024,2004-08-10,2004.0,20.0,Volante
