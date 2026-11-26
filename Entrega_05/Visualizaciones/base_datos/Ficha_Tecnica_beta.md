@@ -1,8 +1,10 @@
-# Fichas técnicas de las bases de la beta
+# Ficha técnica general — El mito del abismo
+
+Construimos nuestra base para explorar las oportunidades de juego de los futbolistas jóvenes y su continuidad después de los 21 años. Nuestra unidad principal es el registro jugador-club-temporada, no el jugador único.
 
 ## Fuentes y extracción
-- FBref: [2015–2016](https://fbref.com/en/comps/35/2015-2016/stats/2015-2016-Liga-de-Primera-Stats), [2016–2017](https://fbref.com/en/comps/35/2016-2017/stats/2016-2017-Liga-de-Primera-Stats), [Transición 2017](https://fbref.com/en/comps/35/2017/stats/2017-Liga-de-Primera-Stats). Tablas copiadas por Sofía el 25/11/2026; 331 filas relevantes transcritas con IA, 259 seleccionadas por nacimiento, nacionalidad reportada CHI y edad al cierre <=21. Tres nacimientos desconocidos preservados aparte. No se conserva aquí la totalidad de las tablas originales.
-- Classificação Geral: [API 2018](https://api.classificacaogeral.com.br/v1/competitions/265/editions/2018/players), sustituir año 2018 por cada año hasta 2024. Extracción paginada y respaldos previos del equipo. Notebook facilitado por la profesora y archivo de fuentes incluidos. No se verificó disponibilidad en vivo en esta revisión.
+- FBref: [2015–2016](https://fbref.com/en/comps/35/2015-2016/stats/2015-2016-Liga-de-Primera-Stats), [2016–2017](https://fbref.com/en/comps/35/2016-2017/stats/2016-2017-Liga-de-Primera-Stats), [Transición 2017](https://fbref.com/en/comps/35/2017/stats/2017-Liga-de-Primera-Stats). El 25/11/2026 Sofía recopiló las tablas; con apoyo de IA transcribimos 331 filas relevantes y seleccionamos 259 por nacimiento, nacionalidad reportada CHI y edad al cierre de hasta 21 años. Tres nacimientos desconocidos preservados aparte. No se conserva aquí la totalidad de las tablas originales.
+- Classificação Geral: [API 2018](https://api.classificacaogeral.com.br/v1/competitions/265/editions/2018/players), sustituir año 2018 por cada año hasta 2024. Extracción paginada y respaldos previos del equipo. Notebook facilitado por la profesora y archivo de fuentes incluidos. No hemos comprobado nuevamente la disponibilidad en vivo de la API.
 
 ## Archivos utilizados
 | CSV | Unidad | Campos principales | Tratamiento |
@@ -20,3 +22,16 @@ Todos los CSV en UTF-8, separados por coma. Minutos son numéricos; vacío signi
 
 ## Replicación
 Ejecutar notebook complementario con ZIP original para obtener la base integrada; luego desde el repositorio `python Entrega_05/visualizaciones/codigo/generar_beta.py` (pandas). Genera CSV analíticos y `docs/data.js`. Las visualizaciones funcionan con Plotly.js local. Fuente adicional de contraste reglamentario indicada en Entrega 04: [Pauta 2019](https://www.pauta.cl/deportes/2019/08/03/los-jugadores-sub-21-en-primera-division-del-futbol-chileno-2019.html); verificar bases oficiales año a año antes de afirmar cumplimiento.
+
+## Correspondencia con las visualizaciones
+
+| Recurso web | CSV principal | Qué comunica |
+|---|---|---|
+| Cobertura | `cobertura_beta.csv` | Registros con y sin minutos por temporada |
+| Explorador histórico | `juveniles_fbref_2015_2017.csv` | Minutos individuales, club y porcentaje nominal |
+| Comparación de clubes | `clubes_beta.csv` | Suma de minutos registrados por club y temporada |
+| Trayectorias | `edades_beta.csv` y `comparacion_edades_completa.csv` | Promedio y mediana a los 21–24 años en 46 casos completos |
+
+## Control de consistencia
+
+La base analítica contiene 1.659 registros, 1.406 con minutos y 253 sin minutos. Los conteos por temporada suman esas mismas cantidades. La base histórica contiene 259 registros. La tabla de trayectorias contiene 46 casos y sus agregaciones se presentan para cuatro edades. Este control de consistencia de archivos no sustituye el cotejo de la transcripción con FBref ni la validación de identidades.
