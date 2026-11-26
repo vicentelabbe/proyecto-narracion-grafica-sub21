@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>El mito del abismo</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="plotly.min.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-topline">
+        <span>/// FÚTBOL CHILENO / DATASTORY</span>
+        <span class="hero-counter">01 / 05</span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">PERIODISMO DE DATOS</p>
+          <h1>EL MITO DEL <span>ABISMO</span></h1>
+          <p class="hero-lead">¿Qué pasa con las oportunidades de los futbolistas jóvenes en Chile? Los datos muestran una realidad más compleja que la idea de un “abismo” entre el fútbol formativo y el profesional.</p>
+          <div class="hero-actions">
+            <a class="button-primary" href="#introduccion">EXPLORAR EL ANÁLISIS</a>
+          </div>
+          <p class="byline">Sofía Carvajal y Vicente Labbé · COM-208 · versión beta</p>
+        </div>
+
+        <aside class="hero-panel" aria-label="Resumen principal">
+          <div class="badge">HALLAZGO</div>
+          <div class="big-number">46</div>
+          <p class="hero-panel-copy">jugadores con minutos observados a los 21, 22, 23 y 24 años.</p>
+          <div class="slashes"></div>
+        </aside>
+      </div>
+    </header>
+
+    <nav class="menu-capitulos" aria-label="Capítulos">
+      <a href="#introduccion">Inicio</a>
+      <a href="#historico">Los datos</a>
+      <a href="#visualizacion-02">Clubes</a>
+      <a href="#trayectorias">Trayectorias</a>
+      <a href="#metodologia">Método</a>
+    </nav>
+
+    <main>
+      <section id="introduccion" class="story-card intro-card">
+        <div class="section-head">
+          <p class="kicker">01 / LA PREGUNTA</p>
+          <h2>Entrar no es lo mismo que quedarse</h2>
+        </div>
+
+        <div class="split-copy">
+          <div>
+            <p>La regla juvenil instala una promesa: abrir espacio para el debut de futbolistas jóvenes. Pero una cosa es entrar a Primera y otra muy distinta es sostener minutos, continuidad y protagonismo cuando pasan los años.</p>
+            <p>Esta investigación toma esa intuición y la pone a prueba con registros por temporada, club, edad y minutos jugados.</p>
+          </div>
+          <div class="highlight-box">
+            <h3>La hipótesis</h3>
+            <p>La creencia extendida dice que en Chile es cada vez más difícil consolidarse en el primer equipo. ¿Es verdad? Analizamos diez temporadas entre 2015 y 2024 para explorar la continuidad de minutos.</p>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <strong>1.659</strong>
+            <span>registros analíticos integrados</span>
+          </article>
+          <article class="stat-card">
+            <strong>259</strong>
+            <span>registros históricos con minutos</span>
+          </article>
+          <article class="stat-card">
+            <strong>46</strong>
+            <span>casos completos seguidos entre los 21 y 24 años</span>
+          </article>
+        </div>
+
+        <p class="section-footnote">Estos números describen la base construida para la investigación, no el universo total de futbolistas ni los beneficiarios formales de la norma.</p>
+      </section>
+
+      <section id="historico" class="story-card">
+        <div class="section-head">
+          <p class="kicker">02 / LA COBERTURA</p>
+          <h2>Diez años, dos fuentes</h2>
+        </div>
+
+        <div class="viz-layout">
+          <div class="viz-copy-panel">
+            <h3>Dónde están los datos</h3>
+            <p>La reconstrucción 2015–2017 suma <strong>259 registros con minutos</strong>. Para 2018–2024 quedan <strong>253 registros sin minutos</strong> después de excluir cinco edades imposibles.</p>
+            <p>La ausencia de datos no significa ausencia de juego: significa que la cobertura de las fuentes es desigual y que parte de la historia todavía debe leerse con cautela.</p>
+            <div class="mini-tag">Lectura rápida: la cobertura es desigual entre temporadas.</div>
+          </div>
+
+          <div class="viz-panel">
+            <div class="viz-title-wrap">
+              <h3>Participación de registros con y sin minutos</h3>
+              <p class="viz-caption">Cada barra resume cuántos registros aparecen por temporada y cuántos de esos casos tienen minutos utilizables para el análisis.</p>
+            </div>
+            <div id="coverage" class="plot" aria-label="Cobertura por temporada"></div>
+            <p id="coverage-summary" class="note note-strong"></p>
+          </div>
+        </div>
+
+        <div class="explorer-block">
+          <div class="explorer-header">
+            <div>
+              <p class="kicker">EXPLORADOR</p>
+              <h3>Busca jugadores y clubes en los primeros torneos</h3>
+            </div>
+            <p class="viz-caption">Filtra la base histórica por temporada, nombre o club. La tabla muestra los registros recuperados y su porcentaje nominal de minutos programados.</p>
+          </div>
+
+          <div class="controls">
+            <label>Temporada <select id="historical-season"></select></label>
+            <label>Jugador o club <input id="search" type="search" placeholder="Ej. Suazo"></label>
+            <label>Orden <select id="order"><option value="minutes">Más minutos</option><option value="name">Nombre</option></select></label>
+          </div>
+
+          <p id="result-count" class="result-count" aria-live="polite"></p>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr><th>Jugador</th><th>Club</th><th>Nacimiento</th><th>Minutos</th><th>% nominal</th></tr>
+              </thead>
+              <tbody id="historical-rows"></tbody>
+            </table>
+          </div>
+          <p class="note">Porcentaje nominal: minutos / (90 × 30 fechas), o 15 fechas en Transición 2017. No es un cálculo reglamentario.</p>
+        </div>
+      </section>
+
+      <section id="visualizacion-02" class="story-card">
+        <div class="section-head">
+          <p class="kicker">03 / LOS CLUBES</p>
+          <h2>El espacio que dan los equipos</h2>
+        </div>
+
+        <div class="viz-layout">
+          <div class="viz-copy-panel accent-left">
+            <h3>La desigualdad entre clubes</h3>
+            <p>No todos los equipos entregan las mismas oportunidades. En algunas temporadas hay clubes que concentran muchos más minutos juveniles que otros.</p>
+            <p>Este gráfico permite comparar el espacio registrado para futbolistas chilenos jóvenes dentro de una misma temporada.</p>
+            <label class="compact-label">Temporada <select id="club-season"></select></label>
+          </div>
+
+          <div class="viz-panel">
+            <div class="viz-title-wrap">
+              <h3>Minutos registrados por club</h3>
+              <p class="viz-caption">Selecciona una temporada y compara los minutos registrados de jugadores de hasta 21 años al cierre del año.</p>
+            </div>
+            <div id="clubs" class="plot" aria-label="Minutos por club"></div>
+            <p id="club-note" class="note note-strong"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="trayectorias" class="story-card">
+        <div class="section-head">
+          <p class="kicker">04 / DESPUÉS DE LOS 21</p>
+          <h2>Más datos, menos mitos</h2>
+        </div>
+
+        <div class="conclusion-banner">
+          <span class="badge">EL HALLAZGO</span>
+          <h3>El abismo no aparece en todos los casos</h3>
+          <p>Entre 46 jugadores con seguimiento completo a los 21, 22, 23 y 24 años, el promedio de minutos sube de <strong>1.068</strong> a <strong>1.318</strong>. En esta muestra, <strong>29 aumentan</strong> sus minutos y <strong>17 los reducen</strong>.</p>
+        </div>
+
+        <div class="viz-layout single-viz">
+          <div class="viz-copy-panel">
+            <h3>Qué muestra este gráfico</h3>
+            <p>Resume la evolución de los minutos en la muestra completa. Puedes alternar entre promedio y mediana para ver si la tendencia se mantiene cuando se reducen los efectos de casos extremos.</p>
+            <label class="compact-label">Medida <select id="metric"><option value="promedio">Promedio</option><option value="mediana">Mediana</option></select></label>
+          </div>
+
+          <div class="viz-panel">
+            <div class="viz-title-wrap">
+              <h3>Minutos por edad</h3>
+              <p class="viz-caption">Lectura rápida: la caída no es general. La tendencia agregada de la muestra apunta a más minutos, no menos.</p>
+            </div>
+            <div id="ages" class="plot" aria-label="Minutos por edad"></div>
+            <p id="age-note" class="note note-strong">Solo casos completos: no incluye a quienes no tienen registros en las cuatro edades; no permite inferir causalidad ni abandono. Minutos absolutos, sin ajuste por duración de torneos.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="metodologia" class="story-card method-card">
+        <div class="section-head">
+          <p class="kicker">05 / TRANSPARENCIA</p>
+          <h2>Qué sabemos y qué falta</h2>
+        </div>
+
+        <div class="method-grid">
+          <div class="method-box">
+            <h3>Metodología</h3>
+            <p>El conjunto integra FBref (2015–2017) y Classificação Geral (2018–2024). Se utiliza edad al cierre del año, no elegibilidad reglamentaria. Los cruces históricos son candidatos nominales, no trayectorias confirmadas.</p>
+          </div>
+          <div class="method-box">
+            <h3>Limitaciones</h3>
+            <p>Los datos de clubes se comparan por temporada y fuente. Los registros sin minutos no se imputan. Cinco edades negativas se separaron del análisis y tres nacimientos históricos desconocidos quedaron fuera desde la integración.</p>
+          </div>
+        </div>
+
+        <div class="sources-box">
+          <h3>Fuentes y documentación</h3>
+          <p>Fuentes: <a href="https://fbref.com/en/comps/35/2015-2016/stats/2015-2016-Liga-de-Primera-Stats">FBref 2015–2016</a> · <a href="https://fbref.com/en/comps/35/2016-2017/stats/2016-2017-Liga-de-Primera-Stats">2016–2017</a> · <a href="https://fbref.com/en/comps/35/2017/stats/2017-Liga-de-Primera-Stats">2017</a> · <a href="https://api.classificacaogeral.com.br/v1/competitions/265/editions/2018/players">API Classificação Geral</a> · <a href="https://github.com/vicentelabbe/proyecto-narracion-grafica-sub21">Repositorio y documentación</a>.</p>
+          <p class="note">Texto beta sugerido con apoyo de IA, sujeto a revisión editorial del equipo.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      EL MITO DEL ABISMO · COM-208 · PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE
+    </footer>
+  </div>
+</body>
+</html>
