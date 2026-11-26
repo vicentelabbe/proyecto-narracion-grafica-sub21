@@ -1,300 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El mito del abismo | Regla Sub-21</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>El mito del abismo</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="plotly.min.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  
-<header>
-  <p class="portada-etiqueta">
-    PERIODISMO DE DATOS · FÚTBOL CHILENO
-  </p>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-topline">
+        <span>/// FÚTBOL CHILENO / DATASTORY</span>
+        <span class="hero-counter">01 / 05</span>
+      </div>
 
-  <h1>El mito del abismo</h1>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">PERIODISMO DE DATOS</p>
+          <h1>EL MITO DEL <span>ABISMO</span></h1>
+          <p class="hero-lead">¿Qué pasa con las oportunidades de los futbolistas jóvenes en Chile? Los datos muestran una realidad más compleja que la idea de un “abismo” entre el fútbol formativo y el profesional.</p>
+          <div class="hero-actions">
+            <a class="button-primary" href="#introduccion">EXPLORAR EL ANÁLISIS</a>
+          </div>
+          <p class="byline">Sofía Carvajal y Vicente Labbé · COM-208 · versión beta</p>
+        </div>
 
-  <p class="portada-bajada">
-    ¿Qué ocurre con los futbolistas jóvenes
-    después de sus primeras oportunidades
-    en Primera División?
-  </p>
+        <aside class="hero-panel" aria-label="Resumen principal">
+          <div class="badge">HALLAZGO</div>
+          <div class="big-number">40,7%</div>
+          <p class="hero-panel-copy">de los jugadores de Primera en la base analítica tiene 23 años o menos.</p>
+          <div class="slashes"></div>
+        </aside>
+      </div>
+    </header>
 
-  <p class="portada-nota">
-    Una investigación sobre la regla Sub-21,
-    los minutos de juego y las trayectorias
-    posteriores de una generación de futbolistas.
-  </p>
-</header>
+    <nav class="menu-capitulos" aria-label="Capítulos">
+      <a href="#introduccion">Inicio</a>
+      <a href="#historico">Los datos</a>
+      <a href="#visualizacion-02">Clubes</a>
+      <a href="#trayectorias">Trayectorias</a>
+      <a href="#metodologia">Método</a>
+    </nav>
 
-<nav class="menu-capitulos" aria-label="Navegación por capítulos">
-  <a href="#introduccion">Inicio</a>
-  <a href="#regla-sub21">La regla Sub-21</a>
-  <a href="#visualizacion-02">Minutos por club</a>
-  <a href="#trayectorias">Trayectorias</a>
-  <a href="#cierre">Conclusiones</a>
-  <a href="#metodologia">Metodología</a>
-</nav>
+    <main>
+      <section id="introduccion" class="story-card intro-card">
+        <div class="section-head">
+          <p class="kicker">01 / LA PREGUNTA</p>
+          <h2>Entrar no es lo mismo que quedarse</h2>
+        </div>
 
-  <main>
+        <div class="split-copy">
+          <div>
+            <p>La regla juvenil instala una promesa: abrir espacio para el debut de futbolistas jóvenes. Pero una cosa es entrar a Primera y otra muy distinta es sostener minutos, continuidad y protagonismo cuando pasan los años.</p>
+            <p>Esta investigación toma esa intuición y la pone a prueba con registros por temporada, club, edad y minutos jugados.</p>
+          </div>
+          <div class="highlight-box">
+            <h3>La hipótesis</h3>
+            <p>La creencia extendida dice que en Chile es cada vez más difícil consolidarse en el primer equipo. ¿Es verdad? Analizamos 20 temporadas para medir si el salto al profesionalismo se cierra o se transforma.</p>
+          </div>
+        </div>
 
-<section id="introduccion">
+        <div class="stats-grid">
+          <article class="stat-card">
+            <strong>1.659</strong>
+            <span>registros analíticos integrados</span>
+          </article>
+          <article class="stat-card">
+            <strong>259</strong>
+            <span>registros históricos con minutos</span>
+          </article>
+          <article class="stat-card">
+            <strong>46</strong>
+            <span>casos completos seguidos entre los 21 y 24 años</span>
+          </article>
+        </div>
 
-  <h2>Una oportunidad de llegar a Primera</h2>
+        <p class="section-footnote">Estos números describen la base construida para la investigación, no el universo total de futbolistas ni los beneficiarios formales de la norma.</p>
+      </section>
 
-  <p>
-    Para miles de jóvenes que crecen jugando fútbol
-    en Chile, llegar a Primera División representa
-    uno de sus mayores sueños. Pero entre las
-    divisiones inferiores y el profesionalismo
-    existe un camino lleno de obstáculos.
-  </p>
+      <section id="historico" class="story-card">
+        <div class="section-head">
+          <p class="kicker">02 / LA COBERTURA</p>
+          <h2>Diez años, dos fuentes</h2>
+        </div>
 
-  <p>
-    Conseguir una oportunidad no es lo mismo que
-    consolidarse. Debutar, sumar minutos y mantenerse
-    en el fútbol profesional son desafíos distintos,
-    que no siempre tienen el mismo desenlace.
-  </p>
+        <div class="viz-layout">
+          <div class="viz-copy-panel">
+            <h3>Dónde están los datos</h3>
+            <p>La reconstrucción 2015–2017 suma <strong>259 registros con minutos</strong>. Para 2018–2024 quedan <strong>253 registros sin minutos</strong> después de excluir cinco edades imposibles.</p>
+            <p>La ausencia de datos no significa ausencia de juego: significa que la cobertura de las fuentes es desigual y que parte de la historia todavía debe leerse con cautela.</p>
+            <div class="mini-tag">Lectura rápida: la base mejora con el tiempo, pero nunca es perfecta.</div>
+          </div>
 
-  <p>
-    En Chile, la regla Sub-21 se creó para promover
-    la participación de futbolistas jóvenes en los
-    primeros equipos. Pero surge una pregunta:
-    ¿qué ocurre con esos jugadores después de recibir
-    sus primeras oportunidades?
-  </p>
+          <div class="viz-panel">
+            <div class="viz-title-wrap">
+              <h3>Participación de registros con y sin minutos</h3>
+              <p class="viz-caption">Cada barra resume cuántos jugadores aparecen por temporada y cuántos de esos casos tienen minutos utilizables para el análisis.</p>
+            </div>
+            <div id="coverage" class="plot" aria-label="Cobertura por temporada"></div>
+            <p id="coverage-summary" class="note note-strong"></p>
+          </div>
+        </div>
 
-  <p>
-    En "El mito del abismo" exploramos esta pregunta
-    a partir de dos dimensiones: los minutos juveniles
-    registrados por los clubes durante 2019 y las
-    trayectorias posteriores de una cohorte de
-    25 futbolistas.
-  </p>
+        <div class="explorer-block">
+          <div class="explorer-header">
+            <div>
+              <p class="kicker">EXPLORADOR</p>
+              <h3>Busca jugadores y clubes en los primeros torneos</h3>
+            </div>
+            <p class="viz-caption">Filtra la base histórica por temporada, nombre o club. La tabla muestra los registros recuperados y su porcentaje nominal de minutos programados.</p>
+          </div>
 
-  <p>
-    A través de datos y visualizaciones interactivas,
-    buscamos comprender si las primeras oportunidades
-    se traducen en continuidad profesional o si
-    representan solamente el comienzo de un desafío
-    mucho mayor.
-  </p>
+          <div class="controls">
+            <label>Temporada <select id="historical-season"></select></label>
+            <label>Jugador o club <input id="search" type="search" placeholder="Ej. Suazo"></label>
+            <label>Orden <select id="order"><option value="minutes">Más minutos</option><option value="name">Nombre</option></select></label>
+          </div>
 
-</section>
+          <p id="result-count" class="result-count" aria-live="polite"></p>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr><th>Jugador</th><th>Club</th><th>Nacimiento</th><th>Minutos</th><th>% nominal</th></tr>
+              </thead>
+              <tbody id="historical-rows"></tbody>
+            </table>
+          </div>
+          <p class="note">Porcentaje nominal: minutos / (90 × 30 fechas), o 15 fechas en Transición 2017. No es un cálculo reglamentario.</p>
+        </div>
+      </section>
 
-<section id="regla-sub21">
+      <section id="visualizacion-02" class="story-card">
+        <div class="section-head">
+          <p class="kicker">03 / LOS CLUBES</p>
+          <h2>El espacio que dan los equipos</h2>
+        </div>
 
-  <h2>La regla Sub-21: una oportunidad obligatoria</h2>
+        <div class="viz-layout">
+          <div class="viz-copy-panel accent-left">
+            <h3>La desigualdad entre clubes</h3>
+            <p>No todos los equipos entregan las mismas oportunidades. En algunas temporadas hay clubes que concentran muchos más minutos juveniles que otros.</p>
+            <p>Este gráfico permite comparar el espacio registrado para futbolistas chilenos jóvenes dentro de una misma temporada.</p>
+            <label class="compact-label">Temporada <select id="club-season"></select></label>
+          </div>
 
-  <p>
-    En el fútbol chileno, conseguir minutos en Primera
-    División es uno de los desafíos de los jugadores
-    jóvenes. Para favorecer su participación, la ANFP
-    estableció una norma que obligaba a los clubes a
-    utilizar futbolistas juveniles durante el
-    Campeonato Nacional.
-  </p>
+          <div class="viz-panel">
+            <div class="viz-title-wrap">
+              <h3>Minutos registrados por club</h3>
+              <p class="viz-caption">Selecciona un año y compara cuánto espacio dieron los equipos a los jugadores más jóvenes de la base.</p>
+            </div>
+            <div id="clubs" class="plot" aria-label="Minutos por club"></div>
+            <p id="club-note" class="note note-strong"></p>
+          </div>
+        </div>
+      </section>
 
-  <p>
-    En 2019, la regulación contemplaba jugadores
-    chilenos de las generaciones 1998 y posteriores,
-    con condiciones específicas para su inclusión.
-    La exigencia original equivalía al 50% de los
-    minutos de un campeonato de 30 fechas:
-    un total de 1.350 minutos.
-  </p>
+      <section id="trayectorias" class="story-card">
+        <div class="section-head">
+          <p class="kicker">04 / DESPUÉS DE LOS 21</p>
+          <h2>Más datos, menos mitos</h2>
+        </div>
 
-  <p>
-    Sin embargo, aquella temporada tuvo una
-    particularidad: el campeonato terminó
-    anticipadamente en noviembre de 2019,
-    en medio del estallido social.
-    Por eso, es necesario distinguir entre
-    el requisito inicialmente establecido y
-    los registros efectivos de participación.
-  </p>
+        <div class="conclusion-banner">
+          <span class="badge">EL HALLAZGO</span>
+          <h3>El abismo no aparece en todos los casos</h3>
+          <p>Entre 46 jugadores con seguimiento completo a los 21, 22, 23 y 24 años, el promedio de minutos sube de <strong>1.068</strong> a <strong>1.318</strong>. En esta muestra, <strong>29 aumentan</strong> sus minutos y <strong>17 los reducen</strong>.</p>
+        </div>
 
-  <p>
-    La pregunta central de esta investigación
-    va más allá de la obligación de sumar minutos:
-    ¿qué ocurre con las oportunidades de los
-    futbolistas jóvenes una vez que dejan de
-    estar protegidos por una norma de participación?
-  </p>
+        <div class="viz-layout single-viz">
+          <div class="viz-copy-panel">
+            <h3>Qué muestra este gráfico</h3>
+            <p>Resume la evolución de los minutos en la muestra completa. Puedes alternar entre promedio y mediana para ver si la tendencia se mantiene cuando se reducen los efectos de casos extremos.</p>
+            <label class="compact-label">Medida <select id="metric"><option value="promedio">Promedio</option><option value="mediana">Mediana</option></select></label>
+          </div>
 
-  <p>
-    <strong>Fuentes:</strong>
-    <a href="https://www.pauta.cl/deportes/2019/08/03/los-jugadores-sub-21-en-primera-division-del-futbol-chileno-2019.html">
-      Pauta, agosto de 2019
-    </a>
-    y
-    <a href="https://www.24horas.cl/deportes/futbol-nacional/anfp-decide-dar-por-finalizado-el-torneo-nacional-y-la-uc-se-proclama-bicampeon-3760263">
-      24 Horas, noviembre de 2019
-    </a>.
-  </p>
+          <div class="viz-panel">
+            <div class="viz-title-wrap">
+              <h3>Minutos por edad</h3>
+              <p class="viz-caption">Lectura rápida: la caída no es general. La tendencia agregada de la muestra apunta a más minutos, no menos.</p>
+            </div>
+            <div id="ages" class="plot" aria-label="Minutos por edad"></div>
+            <p id="age-note" class="note note-strong">Solo casos completos: no incluye a quienes no tienen registros en las cuatro edades; no permite inferir causalidad ni abandono.</p>
+          </div>
+        </div>
+      </section>
 
-</section>
+      <section id="metodologia" class="story-card method-card">
+        <div class="section-head">
+          <p class="kicker">05 / TRANSPARENCIA</p>
+          <h2>Qué sabemos y qué falta</h2>
+        </div>
 
+        <div class="method-grid">
+          <div class="method-box">
+            <h3>Metodología</h3>
+            <p>El conjunto integra FBref (2015–2017) y Classificação Geral (2018–2024). Se utiliza edad al cierre del año, no elegibilidad reglamentaria. Los cruces históricos son candidatos nominales, no trayectorias confirmadas.</p>
+          </div>
+          <div class="method-box">
+            <h3>Limitaciones</h3>
+            <p>Los datos de clubes se comparan por temporada y fuente. Los registros sin minutos no se imputan. Cinco edades negativas se separaron del análisis y tres nacimientos históricos desconocidos quedaron fuera desde la integración.</p>
+          </div>
+        </div>
 
-    <section id="visualizacion-02">
-      <h2>Visualización 02: Minutos Sub-21 por club</h2>
-      <p>Temporada 2019. Datos pendientes de validación.</p>
+        <div class="sources-box">
+          <h3>Fuentes y documentación</h3>
+          <p>Fuentes: <a href="https://fbref.com/en/comps/35/2015-2016/stats/2015-2016-Liga-de-Primera-Stats">FBref 2015–2016</a> · <a href="https://fbref.com/en/comps/35/2016-2017/stats/2016-2017-Liga-de-Primera-Stats">2016–2017</a> · <a href="https://fbref.com/en/comps/35/2017/stats/2017-Liga-de-Primera-Stats">2017</a> · <a href="https://api.classificacaogeral.com.br/v1/competitions/265/editions/2018/players">API Classificação Geral</a> · <a href="https://github.com/vicentelabbe/proyecto-narracion-grafica-sub21">Repositorio y documentación</a>.</p>
+          <p class="note">Texto beta sugerido con apoyo de IA, sujeto a revisión editorial del equipo.</p>
+        </div>
+      </section>
+    </main>
 
-      <iframe
-        src="vis_02.html"
-        title="Gráfico interactivo de minutos Sub-21"
-        width="100%"
-        height="650"
-        loading="lazy">
-      </iframe>
-    </section>
-
-<section id="trayectorias">
-  <h2>¿Qué pasa después del debut?</h2>
-
-<p>
-  Llegar a Primera División es uno de los grandes sueños
-  de cualquier futbolista juvenil. Pero conseguir los
-  primeros minutos en el profesionalismo no significa
-  necesariamente haber asegurado una carrera.
-  El verdadero desafío comienza después: mantenerse,
-  encontrar continuidad y construir un futuro dentro
-  de un deporte altamente competitivo.
-</p>
-
-<p>
-  La regla Sub-21 busca generar oportunidades para
-  los futbolistas jóvenes. Sin embargo, existe una
-  diferencia importante entre obtener minutos por
-  una exigencia reglamentaria y consolidarse como
-  jugador profesional. ¿Qué ocurre cuando termina
-  esa primera etapa? ¿Cuántas oportunidades se
-  transforman en trayectorias sostenidas?
-</p>
-
-<p>
-  Para explorar estas preguntas, nuestro proyecto
-  considera una cohorte de 25 futbolistas vinculados
-  a la temporada 2019. A través de sus recorridos,
-  buscamos examinar la continuidad en el fútbol
-  chileno, las posibilidades de jugar en el
-  extranjero y el paso por otras categorías.
-</p>
-
-<p>
-  La visualización que aparece a continuación
-  permite acercarse a esas trayectorias y analizar
-  la relación entre las oportunidades iniciales y
-  los caminos posteriores. El objetivo es poner
-  a prueba una pregunta central de esta investigación:
-  ¿la regla Sub-21 ayuda a construir carreras
-  profesionales o principalmente facilita
-  los primeros minutos de competencia?
-</p>
-  
-
-  <h3>Las trayectorias de los jugadores</h3>
-
-<div id="visualizacion-01">
-  <iframe
-    src="vis_01.html"
-    title="Trayectorias de los futbolistas Sub-21"
-    width="100%"
-    height="700"
-    loading="lazy">
-  </iframe>
-</div>
-</section>
-
-    
-<section id="cierre">
-
-  <h2>¿Una oportunidad es suficiente?</h2>
-
-  <p>
-    La regla Sub-21 abre una discusión sobre las
-    oportunidades que reciben los futbolistas
-    jóvenes en el fútbol chileno y sobre lo que
-    ocurre después de sus primeros minutos en
-    Primera División.
-  </p>
-
-  <p>
-    Nuestro análisis considera dos dimensiones:
-    las diferencias de minutaje entre clubes
-    durante 2019 y las trayectorias posteriores
-    de una cohorte de 25 futbolistas.
-  </p>
-
-  <p>
-    La pregunta que atraviesa esta investigación
-    es si las oportunidades iniciales se
-    transforman en continuidad profesional.
-    Para responderla, es necesario contrastar
-    los registros de participación con los
-    recorridos posteriores de los jugadores.
-  </p>
-
-  <p>
-    La conclusión definitiva y la evaluación de
-    nuestra hipótesis se incorporarán después
-    de validar las bases de datos y revisar
-    conjuntamente los resultados.
-  </p>
-
-</section>
-
-<section id="metodologia">
-
-  <h2>¿Cómo construimos esta investigación?</h2>
-
-  <p>
-    Esta webstory forma parte de un proyecto
-    de periodismo de datos sobre la regla
-    Sub-21 del fútbol chileno.
-  </p>
-
-  <p>
-    La investigación utiliza dos conjuntos
-    de datos de trabajo: uno con registros
-    de minutos juveniles de 16 clubes
-    durante 2019 y otro con una cohorte
-    de 25 futbolistas.
-  </p>
-
-  <p>
-    Las visualizaciones fueron desarrolladas
-    utilizando Python y Altair, y luego
-    integradas en una página web construida
-    con HTML, CSS y JavaScript.
-  </p>
-
-  <p>
-    Los registros del minutaje por club
-    todavía requieren contrastación con
-    fuentes oficiales. Asimismo, deben
-    verificarse las trayectorias individuales
-    antes de establecer conclusiones definitivas.
-  </p>
-
-  <p>
-    La documentación del proyecto, las bases
-    de datos y los archivos de código están
-    disponibles en el repositorio del grupo.
-  </p>
-
-  <p>
-    <a href="https://github.com/vicentelabbe/proyecto-narracion-grafica-sub21">
-      Consultar el repositorio y la documentación
-    </a>
-  </p>
-
-</section>
-    
-  </main>
-
-  <script src="script.js"></script>
+    <footer>
+      EL MITO DEL ABISMO · COM-208 · PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE
+    </footer>
+  </div>
 </body>
 </html>
