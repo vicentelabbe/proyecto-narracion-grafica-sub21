@@ -21,9 +21,9 @@
         <div class="hero-copy">
           <p class="eyebrow">PERIODISMO DE DATOS</p>
           <h1>EL MITO DEL <span>ABISMO</span></h1>
-          <p class="hero-lead">¿Qué pasa con las oportunidades de los futbolistas jóvenes en Chile? Los datos muestran una realidad más compleja que la idea de un “abismo” entre el fútbol formativo y el profesional.</p>
+          <p class="hero-lead">La regla juvenil busca abrirles un espacio en Primera División. Pero ¿qué pasa cuando los futbolistas superan los 21 años? Revisamos registros del fútbol chileno entre 2015 y 2024 para entender qué ocurre con sus minutos de juego.</p>
           <div class="hero-actions">
-            <a class="button-primary" href="#introduccion">EXPLORAR EL ANÁLISIS</a>
+            <a class="button-primary" href="#introduccion">LEER EL REPORTAJE</a>
           </div>
           <p class="byline">Sofía Carvajal y Vicente Labbé · COM-208 · versión beta</p>
         </div>
@@ -54,12 +54,12 @@
 
         <div class="split-copy">
           <div>
-            <p>La regla juvenil instala una promesa: abrir espacio para el debut de futbolistas jóvenes. Pero una cosa es entrar a Primera y otra muy distinta es sostener minutos, continuidad y protagonismo cuando pasan los años.</p>
-            <p>Esta investigación toma esa intuición y la pone a prueba con registros por temporada, club, edad y minutos jugados.</p>
+            <p>Para un futbolista joven, entrar a la cancha es apenas el comienzo. El verdadero desafío es volver a jugar el siguiente partido, ganarse un puesto y mantenerlo cuando deja de pertenecer a la categoría juvenil.</p>
+            <p>En Chile, la regla juvenil busca favorecer la participación de los jugadores jóvenes. A partir de ella surge nuestra pregunta: ¿las oportunidades se mantienen cuando los futbolistas crecen o existe un punto en que empiezan a desaparecer?</p>
           </div>
           <div class="highlight-box">
             <h3>La hipótesis</h3>
-            <p>La creencia extendida dice que en Chile es cada vez más difícil consolidarse en el primer equipo. ¿Es verdad? Analizamos diez temporadas entre 2015 y 2024 para explorar la continuidad de minutos.</p>
+            <p>Partimos de la hipótesis de que los futbolistas pierden oportunidades de juego después de los 21 años. Para explorar esa idea, ampliamos nuestro análisis inicial de 2019 e incorporamos diez temporadas entre 2015 y 2024.</p>
           </div>
         </div>
 
@@ -89,15 +89,15 @@
 
         <div class="viz-layout">
           <div class="viz-copy-panel">
-            <h3>Dónde están los datos</h3>
-            <p>La reconstrucción 2015–2017 suma <strong>259 registros con minutos</strong>. Para 2018–2024 quedan <strong>253 registros sin minutos</strong> después de excluir cinco edades imposibles.</p>
-            <p>La ausencia de datos no significa ausencia de juego: significa que la cobertura de las fuentes es desigual y que parte de la historia todavía debe leerse con cautela.</p>
+            <h3>Reconstruir el pasado</h3>
+            <p>Para entender lo que ocurre después de los 21 años, primero necesitamos saber cuánto juegan los jóvenes. Con FBref recuperamos <strong>259 registros con minutos</strong> de los torneos de 2015 a 2017. Al incorporar Classificação Geral para 2018–2024, encontramos <strong>253 registros sin minutos</strong> en la base analítica.</p>
+            <p>Ese vacío importa: no encontrar los minutos de un futbolista no significa que haya dejado de jugar. Por eso distinguimos los registros disponibles de aquellos que todavía necesitan verificación.</p>
             <div class="mini-tag">Lectura rápida: la cobertura es desigual entre temporadas.</div>
           </div>
 
           <div class="viz-panel">
             <div class="viz-title-wrap">
-              <h3>Participación de registros con y sin minutos</h3>
+              <h3>¿Cuántos registros tienen minutos disponibles?</h3>
               <p class="viz-caption">Cada barra resume cuántos registros aparecen por temporada y cuántos de esos casos tienen minutos utilizables para el análisis.</p>
             </div>
             <div id="coverage" class="plot" aria-label="Cobertura por temporada"></div>
@@ -141,9 +141,9 @@
 
         <div class="viz-layout">
           <div class="viz-copy-panel accent-left">
-            <h3>La desigualdad entre clubes</h3>
-            <p>No todos los equipos entregan las mismas oportunidades. En algunas temporadas hay clubes que concentran muchos más minutos juveniles que otros.</p>
-            <p>Este gráfico permite comparar el espacio registrado para futbolistas chilenos jóvenes dentro de una misma temporada.</p>
+            <h3>No todos los clubes registran los mismos minutos</h3>
+            <p>En 2019, nuestra base registra 4.278 minutos juveniles para O’Higgins y 1.420 para Palestino. La diferencia muestra que el tiempo de juego registrado no se distribuye de manera uniforme entre los equipos.</p>
+            <p>Los minutos son un punto de partida para explorar esas diferencias, pero no bastan para determinar la intención formativa de un club ni su cumplimiento de la regla juvenil.</p>
             <label class="compact-label">Temporada <select id="club-season"></select></label>
           </div>
 
@@ -161,26 +161,26 @@
       <section id="trayectorias" class="story-card">
         <div class="section-head">
           <p class="kicker">04 / DESPUÉS DE LOS 21</p>
-          <h2>Más datos, menos mitos</h2>
+          <h2>¿Qué pasa después de los 21?</h2>
         </div>
 
         <div class="conclusion-banner">
           <span class="badge">EL HALLAZGO</span>
-          <h3>El abismo no aparece en todos los casos</h3>
-          <p>Entre 46 jugadores con seguimiento completo a los 21, 22, 23 y 24 años, el promedio de minutos sube de <strong>1.068</strong> a <strong>1.318</strong>. En esta muestra, <strong>29 aumentan</strong> sus minutos y <strong>17 los reducen</strong>.</p>
+          <h3>Una caída que no es universal</h3>
+          <p>El resultado nos llevó a replantear nuestra hipótesis. Entre los 46 jugadores con minutos disponibles a los 21, 22, 23 y 24 años en la fuente de 2018–2024, el promedio pasa de <strong>1.068</strong> a <strong>1.318</strong> minutos. Al comparar los 21 con los 24 años, <strong>29 aumentan</strong> sus minutos y <strong>17 los reducen</strong>. No todos recorren el mismo camino.</p>
         </div>
 
         <div class="viz-layout single-viz">
           <div class="viz-copy-panel">
             <h3>Qué muestra este gráfico</h3>
-            <p>Resume la evolución de los minutos en la muestra completa. Puedes alternar entre promedio y mediana para ver si la tendencia se mantiene cuando se reducen los efectos de casos extremos.</p>
+            <p>El gráfico sigue al mismo grupo de 46 futbolistas a través de las cuatro edades. Puedes alternar entre promedio y mediana para observar cómo cambia la lectura cuando los casos extremos tienen menos influencia.</p>
             <label class="compact-label">Medida <select id="metric"><option value="promedio">Promedio</option><option value="mediana">Mediana</option></select></label>
           </div>
 
           <div class="viz-panel">
             <div class="viz-title-wrap">
               <h3>Minutos por edad</h3>
-              <p class="viz-caption">Lectura rápida: la caída no es general. La tendencia agregada de la muestra apunta a más minutos, no menos.</p>
+              <p class="viz-caption">En este grupo, tanto el promedio como la mediana son mayores a los 24 que a los 21 años, aunque la mediana disminuye entre los 23 y los 24.</p>
             </div>
             <div id="ages" class="plot" aria-label="Minutos por edad"></div>
             <p id="age-note" class="note note-strong">Solo casos completos: no incluye a quienes no tienen registros en las cuatro edades; no permite inferir causalidad ni abandono. Minutos absolutos, sin ajuste por duración de torneos.</p>
@@ -191,12 +191,13 @@
       <section id="metodologia" class="story-card method-card">
         <div class="section-head">
           <p class="kicker">05 / TRANSPARENCIA</p>
-          <h2>Qué sabemos y qué falta</h2>
+          <h2>El abismo sigue siendo una pregunta</h2>
         </div>
 
+        <p>Los resultados cuestionan la idea de que superar los 21 años implique necesariamente perder minutos. Sin embargo, todavía queda una pregunta abierta: ¿qué ocurre con los futbolistas cuya trayectoria no logramos seguir? Para ellos, la ausencia de información no permite distinguir entre una salida de Primera División, un cambio de liga o un registro incompleto. El desafío de nuestra investigación es seguir esas trayectorias sin confundir lo que no sabemos con lo que los datos sí muestran.</p>
         <div class="method-grid">
           <div class="method-box">
-            <h3>Metodología</h3>
+            <h3>Cómo construimos la base</h3>
             <p>El conjunto integra FBref (2015–2017) y Classificação Geral (2018–2024). Se utiliza edad al cierre del año, no elegibilidad reglamentaria. Los cruces históricos son candidatos nominales, no trayectorias confirmadas.</p>
           </div>
           <div class="method-box">
@@ -208,7 +209,7 @@
         <div class="sources-box">
           <h3>Fuentes y documentación</h3>
           <p>Fuentes: <a href="https://fbref.com/en/comps/35/2015-2016/stats/2015-2016-Liga-de-Primera-Stats">FBref 2015–2016</a> · <a href="https://fbref.com/en/comps/35/2016-2017/stats/2016-2017-Liga-de-Primera-Stats">2016–2017</a> · <a href="https://fbref.com/en/comps/35/2017/stats/2017-Liga-de-Primera-Stats">2017</a> · <a href="https://api.classificacaogeral.com.br/v1/competitions/265/editions/2018/players">API Classificação Geral</a> · <a href="https://github.com/vicentelabbe/proyecto-narracion-grafica-sub21">Repositorio y documentación</a>.</p>
-          <p class="note">Texto beta sugerido con apoyo de IA, sujeto a revisión editorial del equipo.</p>
+          <p class="note">Consulta el proceso de desarrollo, las decisiones metodológicas y el registro de herramientas utilizadas en la documentación de la Entrega 05 del repositorio.</p>
         </div>
       </section>
     </main>
