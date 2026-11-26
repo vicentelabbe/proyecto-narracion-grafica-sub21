@@ -145,7 +145,7 @@ function clubs() {
   const top = rows[0];
   const missing = rows.filter(x => x.minutos == null).map(x => x.club);
   const missingText = missing.length ? ` Equipos sin dato completo: ${missing.join(', ')}.` : '';
-  $('club-note').textContent = `${season}: ${top.club} lidera la muestra con ${fmt(top.minutos)} minutos registrados.${missingText} Compara siempre dentro de una misma temporada.`;
+  $('club-note').textContent = `${season}: ${top.club} lidera los minutos observados con ${fmt(top.minutos)} minutos registrados.${missingText} * Al menos un registro sin minutos. Compara siempre dentro de una misma temporada.`;
 }
 
 function ages() {
